@@ -105,7 +105,7 @@ todo_init(std::string dsn) {
 int
 main(int argc, char *argv[]) {
 #ifdef _WIN32
-  setmode(fileno(stdout), _O_U16TEXT);
+  setmode(fileno(stdout), _O_U8TEXT);
 #endif
   std::string dsn = std::getenv("TODO_DSN");
   std::string command = argc >=  2 ? argv[1] : "list";
